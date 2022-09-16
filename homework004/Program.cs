@@ -12,14 +12,11 @@ int Prompt(string msg)
 int[] Array(int len)
 {
     int[] array = new int[len];
-    for (int i = 0; i < array.Length; i+=2)
+    for (int i = 0; i < array.Length; i += 2)
     {
         array[i] = new Random().Next(1, 100);
-        for (int j = i+1; j < array.Length;)
-        {
-            array[j] = array[i];
-            break;
-        }
+        int j = i + 1;
+        array[j] = array[i];
     }
     return array;
 }
